@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Datatable-serverSide 自行封装请求参数和返回数据例子</title>
+<script type="text/javascript" src='jquery.js'></script>
+<script type="text/javascript" src='tools/jquery.pagination.min.js'></script>
+<style type="text/css">
+	        .pagination{font:12px/1.5 'Microsoft YaHei','Arial';color:#333}.pagination:after{content:'';display:table;clear:both}.pagination ul{font-size:0;margin:0;padding:0}.pagination li{display:inline-block;vertical-align:top;margin-left:3px;margin-right:3px}.pagination a{font-size:12px;display:inline-block;vertical-align:top;border:1px solid #ddd;padding:3px 12px;margin-left:3px;margin-right:3px;border-radius:2px;color:#333;text-decoration:none}.pagination li>a{margin:0}.pagination .page-current,.pagination .page-current a,.pagination .ellipsis,.pagination .ellipsis a{cursor:default}.pagination .page-current,.pagination .page-current a{background:#f2f2f2}
+
+</style>
+</head>
+<body>
+    <div class="pagination"></div>
+    <script type="text/javascript">
+    
+    	function pagination(totalsize){
+          $('.pagination').pagination({
+            total: totalsize,
+            onJump: function(index){
+              console.log(index);
+            }
+        });
+    	}
+    	window.onload=function(){
+    		var totalsize=100;
+            pagination(totalsize)
+    	}
+    </script>
+</body>
+</html>
